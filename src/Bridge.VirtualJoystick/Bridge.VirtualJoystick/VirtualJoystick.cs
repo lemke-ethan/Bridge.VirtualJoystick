@@ -1,15 +1,26 @@
-﻿namespace Bridge.VirtualJoystick
+﻿using Bridge.VirtualJoystick.Models;
+using System;
+
+namespace Bridge.VirtualJoystick
 {
+    /// <summary>
+    /// The virtual joystick.
+    /// </summary>
     [External]
     [Namespace("window")]
     [Convention(Target = ConventionTarget.All, Notation = Notation.LowerCase)]
     public class VirtualJoystick
     {
-        #region Public Static Methods
+        #region Constructor
 
-        [Template("new window.virtualJoystick.default()")]
-        public VirtualJoystick() {}
+        /// <summary>
+        /// Create a new joystick.
+        /// </summary>
+        /// <param name="options">The joystick options.</param>
+        [Template("new window.virtualJoystick.default({options})")]
+        public VirtualJoystick(VirtualJoystickOptionsModel options = null) {}
 
         #endregion
+
     }
 }
