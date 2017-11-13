@@ -33,14 +33,23 @@ namespace Example
                     Console.WriteLine($"({x}, {y}), delta ({joystick.DeltaX()}, {joystick.DeltaY()})");
                 }));
 
+            // Setup event name
+            var moveEventName = "move";
+
             // Check if the move event has any event listeners
-            if (joystick.HasListeners("move"))
-                Console.WriteLine("Move has event listeners.");
+            if (joystick.HasListeners(moveEventName))
+                Console.WriteLine("Move has event listeners. HasListeners check.");
 
             // Emit a move event
-            joystick.Emit("move", 1, 1);
+            joystick.Emit(moveEventName, 1, 1);
+
+            // Check if the move event has some event listeners
+            if (joystick.Listeners(moveEventName).Length > 0)
+                Console.WriteLine("Move has event listeners. Listeners.Length check.");
+
+
         }
-     
+
         #endregion
     }
 }

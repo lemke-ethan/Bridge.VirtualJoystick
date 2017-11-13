@@ -79,6 +79,16 @@ namespace Bridge.VirtualJoystick
             return default(bool);
         }
 
+        /// <summary>
+        /// Get the array of event listeners for the event.
+        /// </summary>
+        /// <param name="eventName">The name of the event.</param>
+        /// <returns>The array of registered event listeners.</returns>
+        public Delegate[] Listeners(string eventName)
+        {
+            return default(Delegate[]);
+        }
+
         #endregion
     }
 }
