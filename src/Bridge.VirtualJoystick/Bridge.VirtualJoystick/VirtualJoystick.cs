@@ -53,6 +53,11 @@ namespace Bridge.VirtualJoystick
             return default(int);
         }
 
+        /// <summary>
+        /// Clean up the joystick.
+        /// </summary>
+        public void Destroy() {}
+
         #endregion
     }
 }
