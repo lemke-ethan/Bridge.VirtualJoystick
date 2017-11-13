@@ -35,6 +35,15 @@ namespace Bridge.VirtualJoystick
             return default(VirtualJoystick);
         }
 
+        /// <summary>
+        /// Gets the delta X coordinate of the joystick
+        /// </summary>
+        /// <returns>The delta X coordinate</returns>
+        public int DeltaX()
+        {
+            return default(int);
+        }
+
         #endregion
     }
 }
