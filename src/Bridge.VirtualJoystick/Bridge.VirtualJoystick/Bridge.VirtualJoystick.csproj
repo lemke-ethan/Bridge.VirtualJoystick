@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bridge.json" />
+    <None Include="Bridge.VirtualJoystick.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

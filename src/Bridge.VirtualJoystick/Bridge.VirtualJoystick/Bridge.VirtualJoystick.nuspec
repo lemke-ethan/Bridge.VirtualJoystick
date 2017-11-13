@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.0</version>
+    <title>A Virtual Joystick Bridge.Net definition library.</title>
+    <authors>Ethan Lemke</authors>
+    <owners>Ethan Lemke</owners>
+    <licenseUrl>https://github.com/lemke-ethan/Bridge.VirtualJoystick/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/lemke-ethan/Bridge.VirtualJoystick</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A Bridge.Net definition library for viewar's fork of Jerome Etienne's Virtual Joystick(https://github.com/jeromeetienne/virtualjoystick.js).</description>
+    <tags>Bridge.Net C# VitualJoystick Bridge JavaScript</tags>
+  </metadata>
+</package>
