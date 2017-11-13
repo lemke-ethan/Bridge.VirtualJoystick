@@ -46,8 +46,6 @@ namespace Example
             // Check if the move event has some event listeners
             if (joystick.Listeners(moveEventName).Length > 0)
                 Console.WriteLine("Move has event listeners. Listeners.Length check.");
-
-
         }
 
         #endregion
