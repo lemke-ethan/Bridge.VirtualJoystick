@@ -22,5 +22,19 @@ namespace Bridge.VirtualJoystick
 
         #endregion
 
+        #region Public Methods
+
+        /// <summary>
+        /// Listen on the given event with the given listener.
+        /// </summary>
+        /// <param name="eventName">The name of the event</param>
+        /// <param name="eventListener">The event listener</param>
+        /// <returns>The joystick.</returns>
+        public VirtualJoystick AddEventListener(string eventName, Delegate eventListener)
+        {
+            return default(VirtualJoystick);
+        }
+
+        #endregion
     }
 }
