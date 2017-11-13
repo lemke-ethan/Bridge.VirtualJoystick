@@ -8,7 +8,7 @@ namespace Bridge.VirtualJoystick
     /// </summary>
     [External]
     [Namespace("window")]
-    [Convention(Target = ConventionTarget.All, Notation = Notation.LowerCase)]
+    [Convention(Target = ConventionTarget.All, Notation = Notation.LowerCamelCase)]
     public class VirtualJoystick
     {
         #region Constructor
