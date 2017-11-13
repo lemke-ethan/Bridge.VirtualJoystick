@@ -25,16 +25,17 @@ namespace Example
                     StickRadius = 30
                 });
 
-            // Add an event listener to the move event
-            joystick.AddEventListener(
-                "move", 
-                new Action<int, int>((x, y) => 
-                {
-                    Console.WriteLine($"({x}, {y}), delta ({joystick.DeltaX()}, {joystick.DeltaY()})");
-                }));
-
             // Setup event name
             var moveEventName = "move";
+
+            // Add an event listener to the move event
+            var movementHandler = new Action<int, int>((x, y) =>
+            {
+                Console.WriteLine($"({x}, {y}), delta ({joystick.DeltaX()}, {joystick.DeltaY()})");
+            });
+            joystick.AddEventListener(
+                moveEventName, 
+                movementHandler);
 
             // Check if the move event has any event listeners
             if (joystick.HasListeners(moveEventName))
@@ -46,6 +47,34 @@ namespace Example
             // Check if the move event has some event listeners
             if (joystick.Listeners(moveEventName).Length > 0)
                 Console.WriteLine("Move has event listeners. Listeners.Length check.");
+
+            // Give the user 5 seconds to play with the joystick
+            Bridge.Html5.Window.SetTimeout(
+                () => 
+                {
+                    // Remove the move event listener
+                    joystick.RemoveEventListener(moveEventName, movementHandler);
+                    Console.WriteLine("Removed the move event listener.");
+                    
+                    // Give the user 5 seconds to play with the joystick
+                    Bridge.Html5.Window.SetTimeout(
+                        () =>
+                        {
+                            // Turn off all events
+                            joystick.Off();
+                            Console.WriteLine("Removed all event listeners.");
+
+                            // Check if the move event has any event listeners
+                            if (!joystick.HasListeners(moveEventName))
+                                Console.WriteLine("Move event does not have any listeners.");
+
+                            // Destroy the joystick
+                            joystick.Destroy();
+                            Console.WriteLine("No more joystick...");
+                        },
+                        5000);
+                }, 
+                5000);
         }
 
         #endregion
