@@ -89,6 +89,69 @@ namespace Bridge.VirtualJoystick
             return default(Delegate[]);
         }
 
+        /// <summary>
+        /// Removes all of the event listeners for all of the events.
+        /// </summary>
+        /// <returns>The joystick.</returns>
+        public VirtualJoystick Off()
+        {
+            return default(VirtualJoystick);
+        }
+
+        /// <summary>
+        /// Add a listener to the specified event.
+        /// </summary>
+        /// <param name="eventName">The name of the event.</param>
+        /// <param name="eventListener">The event listener.</param>
+        /// <returns>The joystick.</returns>
+        public VirtualJoystick On(string eventName, Delegate eventListener)
+        {
+            return default(VirtualJoystick);
+        }
+
+        /// <summary>
+        /// Adds an event listener that will be invoked a single
+        /// time then automatically removed.
+        /// </summary>
+        /// <param name="eventName">The name of the event.</param>
+        /// <param name="eventListener">The event listener.</param>
+        /// <returns>The joystick.</returns>
+        public VirtualJoystick Once(string eventName, Delegate eventListener)
+        {
+            return default(VirtualJoystick);
+        }
+
+        /// <summary>
+        /// Removes all of the event listeners of the specified event.
+        /// </summary>
+        /// <param name="eventName">The name of the event.</param>
+        /// <returns>The joystick.</returns>
+        public VirtualJoystick RemoveAllListeners(string eventName)
+        {
+            return default(VirtualJoystick);
+        }
+
+        /// <summary>
+        /// Removes the specified event listener from the event.
+        /// </summary>
+        /// <param name="eventName">The name of the event.</param>
+        /// <param name="eventListener">The event listener.</param>
+        /// <returns>The joystick.</returns>
+        public VirtualJoystick RemoveEventListener(string eventName, Delegate eventListener)
+        {
+            return default(VirtualJoystick);
+        }
+
+        /// <summary>
+        /// Removes the specified event listener from all events.
+        /// </summary>
+        /// <param name="eventListener">The event listener.</param>
+        /// <returns>The joystick.</returns>
+        public VirtualJoystick RemoveListener(Delegate eventListener)
+        {
+            return default(VirtualJoystick);
+        }
+
         #endregion
     }
 }
